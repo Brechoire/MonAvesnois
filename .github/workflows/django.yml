@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  SECRET_KEY: "django-insecure-test-key-for-ci-1234567890"
+  DEBUG: "True"
+  ALLOWED_HOSTS: "localhost,127.0.0.1"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -32,11 +37,9 @@ jobs:
     - name: Run pre-commit
       uses: pre-commit/action@v3.0.0
 
-    - name: Create .env file
+    - name: Create static directory
       run: |
-        echo "SECRET_KEY=django-insecure-test-key-for-ci" > .env
-        echo "DEBUG=True" >> .env
-        echo "ALLOWED_HOSTS=localhost,127.0.0.1" >> .env
+        mkdir -p static
     
     - name: Run Tests
       run: |
@@ -73,6 +76,11 @@ jobs:
 
   coverage:
     runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: "django-insecure-test-key-for-ci-1234567890"
+      DEBUG: "True"
+      ALLOWED_HOSTS: "localhost,127.0.0.1"
+    
     steps:
     - uses: actions/checkout@v4
     
@@ -88,6 +96,10 @@ jobs:
         pip install -r requirements.txt
         pip install -r requirements-dev.txt
         pip install coverage
+    
+    - name: Create static directory
+      run: |
+        mkdir -p static
     
     - name: Run Coverage
       run: |
