@@ -5,23 +5,23 @@ de MonAvesnois. Il gère le rendu des templates et la logique
 métier associée à chaque vue.
 """
 
-from typing import Any, Dict
+from typing import Any
 
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
 
-def home(request: HttpRequest) -> HttpResponse:
-    """Affiche la page d'accueil.
+def home_view(request: HttpRequest) -> HttpResponse:
+    """
+    Vue de la page d'accueil.
 
     Args:
         request: La requête HTTP.
 
     Returns:
-        HttpResponse: La réponse HTTP contenant la page d'accueil.
+        HttpResponse: La réponse HTTP avec le template rendu.
     """
-    context: Dict[str, Any] = {
+    context: dict[str, Any] = {
         "title": "Accueil",
-        "description": "Bienvenue sur Mon Avesnois",
     }
     return render(request, "main/home.html", context)
