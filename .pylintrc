@@ -1,0 +1,23 @@
+[MASTER]
+load-plugins=pylint.extensions.docparams
+
+[FORMAT]
+max-line-length=79
+
+[MESSAGES CONTROL]
+disable=C0111
+
+[DESIGN]
+max-parents=13
+
+[TYPECHECK]
+generated-members=REQUEST,acl_users,aq_parent,"[a-zA-Z]+_set{1,2}",save,delete
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,pk,id
+
+[SIMILARITIES]
+min-similarity-lines=4
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=no

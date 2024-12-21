@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="display-4 mb-4">{{ title }}</h1>
+        <p class="lead">
+            Découvrez les merveilles de l'Avesnois, une région riche en histoire
+            et en patrimoine naturel.
+        </p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-tree text-success"></i> Nature
+                </h5>
+                <p class="card-text">
+                    Explorez nos parcs naturels, nos forêts et nos sentiers de randonnée.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-landmark text-primary"></i> Culture
+                </h5>
+                <p class="card-text">
+                    Visitez nos musées, nos monuments historiques et nos sites culturels.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fas fa-utensils text-warning"></i> Gastronomie
+                </h5>
+                <p class="card-text">
+                    Savourez notre cuisine locale et nos produits du terroir.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

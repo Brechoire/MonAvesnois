@@ -1,0 +1,71 @@
+exclude: |
+  (?x)(
+    ^.*\b(migrations)\b.*$|
+    ^.*\b(venv)\b.*$|
+    ^.*\b(\.git)\b.*$|
+    ^.*\b(staticfiles)\b.*$|
+    ^.*\b(media)\b.*$|
+    ^.*\b(__pycache__)\b.*$|
+    ^.*\.(pyc|pyo|pyd)$
+  )
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: debug-statements
+      - id: check-merge-conflict
+
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        language_version: python3.12
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-quotes
+        args:
+          - --max-line-length=88
+          - --extend-ignore=E203,Q000
+
+  - repo: https://github.com/pycqa/pylint
+    rev: v3.0.3
+    hooks:
+      - id: pylint
+        additional_dependencies:
+          - django
+          - python-dotenv
+        args:
+          - --max-line-length=88
+          - --disable=C0111,C0103,C0114,C0115,C0116,C0199,R0903,C0415
+          - --load-plugins=pylint.extensions.docparams,pylint.extensions.docstyle
+          - --accept-no-param-doc=no
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        additional_dependencies:
+          - types-PyYAML
+          - django-stubs
+          - django
+          - python-dotenv
+        args:
+          - --ignore-missing-imports
+          - --disallow-untyped-defs
+          - --disallow-incomplete-defs
+          - --disable-error-code=valid-type
+          - --disable-error-code=list-item
