@@ -5,6 +5,13 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2024-12-21
+
+### 🔧 Modifié
+- ⚙️ Suppression de safety des dépendances pour résoudre un conflit avec black
+- 🔄 Simplification du workflow CI pour n'utiliser que bandit pour la sécurité
+- 📦 Mise à jour des dépendances de développement
+
 ## [1.1.0] - 2024-12-21
 
 ### ✨ Ajouté
@@ -64,6 +71,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - 📁 Création de la structure des dossiers
 - 📝 Configuration Git
 
+[1.1.1]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.1
 [1.1.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.0
 [1.0.1]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.0.1
 [1.0.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.0.0
