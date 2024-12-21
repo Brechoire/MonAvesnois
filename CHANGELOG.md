@@ -5,6 +5,26 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2024-12-21
+
+### 🔄 Changé
+- ⚡️ Simplification du workflow CI en supprimant Codecov
+- 📊 Intégration de la couverture de tests directement dans le job principal
+- 📈 Génération de rapports de couverture HTML
+- 🔍 Upload des rapports comme artifacts GitHub
+- 🧹 Nettoyage des badges dans le README
+
+### 🗑️ Supprimé
+- 🔌 Dépendance à Codecov
+- 🏷️ Badge Codecov du README
+
+## [1.1.3] - 2024-12-21
+
+### 🔧 Modifié
+- 🔑 Ajout du support du token Codecov dans le workflow CI
+- 📝 Activation du mode verbose pour Codecov
+- 🔍 Amélioration du débogage des erreurs de couverture
+
 ## [1.1.2] - 2024-12-21
 
 ### 🐛 Corrigé
@@ -78,6 +98,8 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - 📁 Création de la structure des dossiers
 - 📝 Configuration Git
 
+[1.2.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.2.0
+[1.1.3]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.3
 [1.1.2]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.2
 [1.1.1]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.1
 [1.1.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.0

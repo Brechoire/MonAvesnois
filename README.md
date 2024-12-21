@@ -6,7 +6,6 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Django CI](https://github.com/Brechoire/MonAvesnois/actions/workflows/django.yml/badge.svg)](https://github.com/Brechoire/MonAvesnois/actions/workflows/django.yml)
-[![codecov](https://codecov.io/gh/Brechoire/MonAvesnois/branch/main/graph/badge.svg)](https://codecov.io/gh/Brechoire/MonAvesnois)
 [![Security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
