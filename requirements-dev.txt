@@ -1,11 +1,13 @@
+black==24.1.1
 flake8==7.0.0
-black==23.12.1
-mypy==1.7.1
+mypy==1.8.0
 pylint==3.0.3
 pre-commit==3.6.0
 isort==5.13.2
 coverage==7.4.0
 bandit==1.7.6
-pytest==7.4.3
+pytest==7.4.4
 pytest-django==4.7.0
 pytest-cov==4.1.0
+django-stubs==4.2.7
+types-setuptools==69.0.0.0
