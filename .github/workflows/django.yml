@@ -1,0 +1,97 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.12]
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'pip'
+    
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install -r requirements-dev.txt
+    
+    - name: Run pre-commit
+      uses: pre-commit/action@v3.0.0
+
+    - name: Create .env file
+      run: |
+        echo "SECRET_KEY=django-insecure-test-key-for-ci" > .env
+        echo "DEBUG=True" >> .env
+        echo "ALLOWED_HOSTS=localhost,127.0.0.1" >> .env
+    
+    - name: Run Tests
+      run: |
+        python manage.py test
+    
+    - name: Run Type Checking
+      run: |
+        mypy .
+    
+    - name: Run Linting
+      run: |
+        pylint **/*.py
+        flake8 .
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Security Check
+      uses: python-security/safety-db-check@v1
+      with:
+        python-version: 3.12
+    
+    - name: Run Bandit
+      run: |
+        pip install bandit
+        bandit -r . -x ./tests,./env,./venv
+
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.12
+        cache: 'pip'
+    
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install -r requirements-dev.txt
+        pip install coverage
+    
+    - name: Run Coverage
+      run: |
+        coverage run manage.py test
+        coverage report
+        coverage xml
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: true

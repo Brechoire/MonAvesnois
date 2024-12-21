@@ -5,6 +5,10 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Django CI](https://github.com/Brechoire/MonAvesnois/actions/workflows/django.yml/badge.svg)](https://github.com/Brechoire/MonAvesnois/actions/workflows/django.yml)
+[![codecov](https://codecov.io/gh/Brechoire/MonAvesnois/branch/main/graph/badge.svg)](https://codecov.io/gh/Brechoire/MonAvesnois)
+[![Security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
 > 🌿 Découvrez les professionnels qui font vivre l'Avesnois.
 
@@ -156,7 +160,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 brechoire.j@gmail.com
 
-Lien du projet : [https://github.com/votre-username/MonAvesnois](https://github.com/votre-username/MonAvesnois)
+Lien du projet : [https://github.com/brechoire/MonAvesnois](https://github.com/brechoire/MonAvesnois)
 
 ---
 

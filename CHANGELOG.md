@@ -5,6 +5,16 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2024-12-21
+
+### ✨ Ajouté
+- 🔄 Configuration GitHub Actions pour CI/CD
+- 🧪 Tests automatisés avec Django CI
+- 📊 Intégration de la couverture de code avec Codecov
+- 🔒 Analyse de sécurité avec Bandit
+- 📝 Nouveaux badges dans le README
+- 📦 Dépendances de développement pour tests et sécurité
+
 ## [1.0.1] - 2024-12-21
 
 ### 🐛 Corrigé
@@ -54,6 +64,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - 📁 Création de la structure des dossiers
 - 📝 Configuration Git
 
+[1.1.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.1.0
 [1.0.1]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.0.1
 [1.0.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v1.0.0
 [0.2.0]: https://github.com/Brechoire/MonAvesnois/releases/tag/v0.2.0
