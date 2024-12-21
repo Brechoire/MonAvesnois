@@ -4,14 +4,12 @@ Ce module définit les URLs spécifiques à l'application principale,
 notamment la page d'accueil et les autres vues du site.
 """
 
-from typing import List, Union
-
-from django.urls import path
+from django.urls import URLPattern, path
 
 from . import views
 
 app_name: str = "main"
 
-urlpatterns: List[Union[path, str]] = [
-    path("", views.home, name="home"),
+urlpatterns: list[URLPattern] = [
+    path("", views.home_view, name="home"),
 ]
