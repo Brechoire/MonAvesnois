@@ -156,7 +156,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 brechoire.j@gmail.com
 
-Lien du projet : [https://github.com/votre-username/MonAvesnois](https://github.com/votre-username/MonAvesnois)
+Lien du projet : [https://github.com/brechoire/MonAvesnois](https://github.com/brechoire/MonAvesnois)
 
 ---
 
